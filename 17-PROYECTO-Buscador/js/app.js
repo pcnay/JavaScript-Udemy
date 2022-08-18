@@ -30,10 +30,19 @@ const  datosBusqueda = {
 // Una vez que se haya cargado por completo llama la funcion.
 document.addEventListener('DOMContentLoaded',() => {
 	mostrarAutos();
+    llenarSelect();
 })
 
 
 // Funciones
+
+
+// Event listener para los select de busqueda 
+marca.addEventListener('change', () => {
+    console.log("Cambio ...");
+
+})
+
 // Mostrara los autos que se encuentran en el archivo "db.js"
 // Se mostraran en el <div>  con el id="resultados" </div>
 function mostrarAutos()
