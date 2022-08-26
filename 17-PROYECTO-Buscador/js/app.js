@@ -20,7 +20,7 @@ const  datosBusqueda = {
 	minimo :'',
 	maximo :'',
 	puertas :'',
-	transmisio :'',
+	transmision :'',
 	color : ''
 }
 
@@ -36,12 +36,55 @@ document.addEventListener('DOMContentLoaded',() => {
 
 // Funciones
 
+// Event listener para los select de busqueda 
+marca.addEventListener('change', e => {
+// console.log(e.target.value); // Obtiene el valor del combo seleccionado
+  datosBusqueda.marca = e.target.value;
+    console.log(datosBusqueda);
+})
+
 
 // Event listener para los select de busqueda 
-marca.addEventListener('change', () => {
-    console.log("Cambio ...");
+year.addEventListener('change', e => {
+    // console.log(e.target.value); // Obtiene el valor del combo seleccionado
+      datosBusqueda.year = e.target.value;
+     console.log(datosBusqueda);
+    })
 
-})
+// Event listener para los select de busqueda 
+minimo.addEventListener('change', e => {
+    // console.log(e.target.value); // Obtiene el valor del combo seleccionado
+      datosBusqueda.minimo = e.target.value;
+     console.log(datosBusqueda);
+    })
+
+// Event listener para los select de busqueda 
+maximo.addEventListener('change', e => {
+    // console.log(e.target.value); // Obtiene el valor del combo seleccionado
+      datosBusqueda.maximo = e.target.value;
+     console.log(datosBusqueda);
+    })
+
+// Event listener para los select de busqueda 
+puertas.addEventListener('change', e => {
+    // console.log(e.target.value); // Obtiene el valor del combo seleccionado
+      datosBusqueda.puertas = e.target.value;
+     console.log(datosBusqueda);
+    })
+
+// Event listener para los select de busqueda 
+transmision.addEventListener('change', e => {
+    // console.log(e.target.value); // Obtiene el valor del combo seleccionado
+      datosBusqueda.transmision = e.target.value;
+     console.log(datosBusqueda);
+    })
+    
+// Event listener para los select de busqueda 
+color.addEventListener('change', e => {
+    // console.log(e.target.value); // Obtiene el valor del combo seleccionado
+      datosBusqueda.color = e.target.value;
+     console.log(datosBusqueda);
+    })
 
 // Mostrara los autos que se encuentran en el archivo "db.js"
 // Se mostraran en el <div>  con el id="resultados" </div>
@@ -68,7 +111,7 @@ function llenarSelect()
 	// Ciclo de Mayor a Menor 
 	for (let i=max; i>min; i--)
 	{
-		console.log(i);
+		//console.log(i);
 		const opcion = document.createElement('option');
 		opcion.value = i;
 		opcion.textContent = i;
